@@ -1,8 +1,8 @@
 import ReactECharts from "echarts-for-react";
 interface dataProps {
-   accounts: number[],
-    purchases: number[],
-    sessions: number[]
+   "accounts": number[],
+    "purchases": number[],
+    "sessions": number[]
 }
 
 interface chartProps {

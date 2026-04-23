@@ -1,18 +1,4 @@
-// interface Props {
-//   title: string;
-//   value: string;
-// }
 
-// const StatsCard = ({ title, value }: Props) => {
-//   return (
-//     <div className="bg-[#2a2a40] p-6 rounded-xl shadow text-white">
-//       <p className="text-sm text-gray-400">{title}</p>
-//       <h2 className="text-2xl font-bold mt-2">{value}</h2>
-//     </div>
-//   );
-// };
-
-// export default StatsCard;
 
 
 interface Props {
