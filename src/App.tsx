@@ -19,7 +19,7 @@ const Layout = () => {
     purchases: [50, 40, 60, 55, 70, 65, 80, 75, 85, 95, 100, 90],
     sessions: [10, 100, 110, 95, 105, 90, 100, 85, 110, 120, 130, 125],
   };
-
+  
   return (
     <div className="h-screen flex flex-col bg-gray-100 dark:bg-[#121212] transition-all">
       {/* 🔝 Navbar */}
