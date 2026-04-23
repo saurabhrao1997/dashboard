@@ -94,6 +94,9 @@ const Layout = () => {
         </main>
       </div>
       <div>
+        add new line for my changes 
+      </div>
+
         new change from dashboard new changee 
       </div>
       {/* ⚙️ Floating Settings */}
