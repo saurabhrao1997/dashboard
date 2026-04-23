@@ -93,6 +93,9 @@ const Layout = () => {
           </div>
         </main>
       </div>
+      <div>
+        add new line for my changes 
+      </div>
 
       {/* ⚙️ Floating Settings */}
       <button
