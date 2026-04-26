@@ -12,6 +12,7 @@ import {
   Wrench,
 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+import { NavLink } from "react-router-dom";
 import { useSidebar } from "../Context/SideBarContext";
 
 const Sidebar = () => {
@@ -57,7 +58,21 @@ const Sidebar = () => {
         setIsHovered(false);
       }, 150);
     }
+
   };
+
+  const menu = [
+  { path: "/", label: "Dashboard", icon: <LayoutDashboard /> },
+  { path: "/home", label: "Pages", icon: <Image /> },
+  { path: "/components", label: "Component", icon: <Hexagon /> },
+  { path: "/forms", label: "Forms", icon: <ClipboardType /> },
+  { path: "/tables", label: "Tables", icon: <Sheet /> },
+  { path: "/maps", label: "Maps", icon: <Pin /> },
+  { path: "/widgets", label: "Widgets", icon: <Wrench /> },
+  { path: "/charts", label: "Charts", icon: <ChartBar /> },
+];
+
+
 
   return (
     <>
@@ -114,7 +129,7 @@ const Sidebar = () => {
           </div>
 
           {/* Menu */}
-          <ul className="mt-6 space-y-6 px-4 uppercase">
+          {/* <ul className="mt-6 space-y-6 px-4 uppercase">
             <li className="flex gap-2 text-sm">
               <LayoutDashboard /> {isSidebarOpen && "Dashboard"}
             </li>
@@ -139,7 +154,22 @@ const Sidebar = () => {
             <li className="flex gap-2 text-sm">
               <ChartBar /> {isSidebarOpen && "Charts"}
             </li>
-          </ul>
+          </ul> */}
+          <ul className="mt-6 space-y-6 px-4 uppercase">
+  {menu.map((item) => (
+    <li key={item.path}>
+      <NavLink
+        to={item.path}
+        className={({ isActive }) =>
+          `flex gap-2 text-sm ${isActive ? "text-orange-400" : ""}`
+        }
+      >
+        {item.icon}
+        {isSidebarOpen && item.label}
+      </NavLink>
+    </li>
+  ))}
+</ul>
         </div>
       </div>
     </>
